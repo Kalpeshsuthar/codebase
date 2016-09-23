@@ -1,11 +1,10 @@
-package com.woktowalk.util;
+package {packagename};
 
 import android.content.Context;
 import android.os.Build;
 import android.os.StrictMode;
 
-import com.woktowalk.R;
-import com.woktowalk.api.ApiList;
+
 
 import org.json.JSONObject;
 

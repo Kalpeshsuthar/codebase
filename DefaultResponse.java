@@ -1,8 +1,8 @@
-package com.psenergy.models;
+package com.companyname.models;
 /*****************************************************************************************
  * Copyright (c) PhaseAlpha, LLC.  All rights reserved.
  * File: DefaultResponse.java
- * Created By: Ravindra
+ * Created By: Auther name
  * Created On: 25/02/2019
  * Description: Default response for apis like cancel order, Reset Password.
  * Modification By: NA

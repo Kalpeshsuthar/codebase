@@ -1,32 +1,32 @@
-package com.psenergy.models;
+package com.companyname.models;
 /*****************************************************************************************
- * Copyright (c) PhaseAlpha, LLC.  All rights reserved.
+ * Copyright (c) company name.  All rights reserved.
  * File: ApiCallingForAccounts.java
- * Created By: Ravindra
+ * Created By: Auther name
  * Created On: 13/02/2019
  *
  * Description: Login and splash api calling is done from here.
- * Modification By: Ravindra
+ * Modification By: Auther name
  * Modified On: 14/02/2019
  * Modification Details: NA
  *
  * Description: Added code for Google PlaceApi calling.
- * Modification By: Ravindra
+ * Modification By: Auther name
  * Modified On: 15/02/2019
  * Modification Details: NA
  * Description: Added code for Google PlaceApi calling.
  *
- * Modification By: Ravindra
+ * Modification By: Auther name
  * Modified On: 15/02/2019
  * Modification Details: NA
  *
  *  Description: Order Entry Form related api calling
- *  * Modification By: Ravindra
+ *  * Modification By: Auther name
  *  * Modified On: 25/02/2019
  *  * Modification Details: NA
  *
  *  Description: Change in Login Api for New Structure
- *  Modification By: Ravindra
+ *  Modification By: Auther name
  *  Modified On: 10/04/2019
  *  Modification Details: NA
  *****************************************************************************************/
@@ -41,20 +41,20 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.google.gson.Gson;
-import com.psenergy.BuildConfig;
-import com.psenergy.PSEApplication;
-import com.psenergy.R;
-import com.psenergy.api.HttpGetWithEntity;
-import com.psenergy.api.RequestCode;
-import com.psenergy.api.RequestListener;
-import com.psenergy.enums.ResponseStatus;
-import com.psenergy.models.fueling.DefaultLocationResponse;
-import com.psenergy.models.fueling.TankLocationList;
-import com.psenergy.models.login.LoginResponse;
-import com.psenergy.models.login.User;
-import com.psenergy.utils.BaseConstant;
-import com.psenergy.utils.Debug;
-import com.psenergy.utils.Utils;
+import com.BuildConfig;
+import com.PSEApplication;
+import com.R;
+import com.api.HttpGetWithEntity;
+import com.api.RequestCode;
+import com.api.RequestListener;
+import com.enums.ResponseStatus;
+import com.models.fueling.DefaultLocationResponse;
+import com.models.fueling.TankLocationList;
+import com.models.login.LoginResponse;
+import com.models.login.User;
+import com.utils.BaseConstant;
+import com.utils.Debug;
+import com.utils.Utils;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -242,7 +242,7 @@ public class ApiCallingForAccounts extends BaseModel {
         protected String doInBackground(String... strings) {
 
             try {
-                com.psenergy.utils.Debug.trace("TAG:", strings[0]);
+                com.utils.Debug.trace("TAG:", strings[0]);
                 Debug.trace("TAG:", jsonParam.toString());
 
 //                Lists.newArrayList(header);
@@ -251,8 +251,8 @@ public class ApiCallingForAccounts extends BaseModel {
                 HttpGetWithEntity myGet = new HttpGetWithEntity(strings[0]);
                 if (requestCode == RequestCode.GET_ORDERS) {
                     myGet.setHeader("Content-Type", "application/json");
-                    myGet.setHeader("UserId", "attordertest@psenergy.com");
-                    myGet.setHeader("Password", "testApi#1");
+                    myGet.setHeader("UserId", "userId");
+                    myGet.setHeader("Password", "password");
                 }
 
                 StringEntity se = new StringEntity(jsonParam);
